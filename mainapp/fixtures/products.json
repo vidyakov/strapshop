@@ -1,0 +1,46 @@
+[
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "name": "не придумал название",
+      "image_on_home": null,
+      "description": "описание",
+      "short_description": "краткое описание",
+      "price": 500
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "name": "серьезных",
+      "image_on_home": null,
+      "description": "описание",
+      "short_description": "краткое описание",
+      "price": 500
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "name": "пунктуальных",
+      "image_on_home": null,
+      "description": "описание",
+      "short_description": "краткое описание",
+      "price": 500
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "одиноких",
+      "image_on_home": null,
+      "description": "описание",
+      "short_description": "краткое описание",
+      "price": 500
+    }
+  }
+]

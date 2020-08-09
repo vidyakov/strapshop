@@ -1,0 +1,21 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+    <div class="posters clearfix">
+        <img src="{% static 'img/poster-big.svg' %}" alt="#" id="big-img">
+        <img src="{% static 'img/poster-mini.svg' %}" alt="#" id="mini-img">
+        <h3 class="poster-mini-title">{{ minititle }}</h3>
+        <h1 class="poster-big-title">{{ bigtitle }}</h1>
+    </div>
+    <div class="description">
+        <h1 class="big-title">{{ headtitle }}</h1>
+        <p class="text-about-us">{{ text }}</p>
+        <img src="{% static 'img/poster-mini.svg' %}" alt="" class="description-img">
+    </div>
+{% endblock content %}

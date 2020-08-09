@@ -1,0 +1,38 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title|title }}
+{% endblock title %}
+
+
+{% block content %}
+    <table class="table table-light table-hover">
+        <thead>
+            <tr class="thead-dark">
+                <th scope="col">pk</th>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Description</th>
+                <th scope="col">Short description</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr class="{% if product.is_active %}{{ 'table-success' }}{% else %}{{ 'table-warning' }}{% endif %}">
+                    <th scope="row">{{ product.pk }}</th>
+                    <td>{{ product.name }}</td>
+                    <td><img src="/media/{{ product.image_on_home }}" alt="" width="50px"></td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.short_description }}</td>
+                    <td>{{ product.price }}</td>
+                    <td><a href="{% url 'admin:page' product.pk %}">Product page</a></td>
+                    <td><a href="{% url 'admin:product_update' product.pk %}">Update</a></td>
+                    <td><a href="{% url 'admin:product_delete' product.pk %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'admin:product_create' %}" class="btn btn-primary btn-md">Create product</a>
+{% endblock content %}

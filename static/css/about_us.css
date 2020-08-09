@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*MAIN*/
+.content {
+    position: relative;
+    width: 1247px;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+.header {
+    padding-top: 35px;
+    position: relative;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.main-logo {
+    position: absolute;
+    color: #202135;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.main-description {
+    position: absolute;
+    left: 70px;
+    color: #707070;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact {
+    position: absolute;
+    right: 60px;
+}
+
+.basket {
+    position: absolute;
+    right: 0px;
+}
+
+
+/*POSTERS*/
+.posters {
+    margin-top: 50px;
+}
+
+#big-img {
+    position: relative;
+    right: 80px;
+    float: left;
+}
+
+#mini-img {
+    position: absolute;
+}
+
+.poster-mini-title {
+    position: relative;
+    top: 450px;
+    font-family: Macho;
+    color: #707070;
+    font-family: Macho;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.poster-big-title {
+    position: relative;
+    top: 450px;
+    font-family: Macho;
+    color: #202135;
+    font-family: Macho;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+
+
+/*BLOCK ABOUT US*/
+.description {
+    margin-top: 150px;
+}
+
+.big-title {
+    color: #202135;
+    font-family: Macho;
+    font-size: 75px;
+    font-weight: 700;
+}
+
+.text-about-us {
+    margin-top: 40px;
+    width: 55%;
+    color: #202135;
+    font-family: Macho;
+    font-size: 25px;
+    font-weight: 400;
+    float: left;
+}
+
+.description-img {
+    position: relative;
+    left: 80px;
+}
+
+
+
+/*FOOTER*/
+.footer {
+    position: relative;
+    margin-top: 75px;
+}
+
+.blue-box {
+    position: relative;
+    width: 505px;
+    height: 140px;
+    background-color: #ebf5f6;
+    float: left;
+}
+
+.footer-logo {
+    position: absolute;
+    text-decoration: none;
+    color: #202135;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    left: 50px;
+    top: 50px;
+}
+
+.footer-description {
+    position: absolute;
+    color: #707070;
+    font-family: Macho;
+    font-size: 15px;
+    font-weight: 700;
+    left: 50px;
+    top: 70px;
+}
+
+.contacts {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    color: #707070;
+}
+
+.caption-contacts {
+    color: #202135;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contacts-phone {
+    text-decoration: none;
+    color: #707070;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contacts-email {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #707070;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.link-telegram {
+    position: absolute;
+    right: 0px;
+    top: 70px;
+}
+
+.logo-insta {
+    position: absolute;
+    right: 0px;
+    bottom: -5px;
+}

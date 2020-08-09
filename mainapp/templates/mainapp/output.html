@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|title }}</title>
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+</head>
+<body>
+    <div class="content">
+        <div class="yellow-box">
+            <a href="{% url 'home' %}" id="button-back"><img src="{% static 'img/back.svg' %}" alt=""></a>
+            <h1 class="thin-title">Ремешок для</h1>
+            <h1 class="bold-title">{{ product.name }}</h1>
+            {# Pagination #}
+            {% if main_photo.has_previous %}
+                <a href="{% url 'strap:page' product.pk main_photo.previous_page_number %}">назад</a>
+            {% endif %}
+            {% if main_photo.has_next %}
+                <a href="{% url 'strap:page' product.pk main_photo.next_page_number %}">вперед</a>
+            {% endif %}
+            <img src="/media/{{ main_photo.0 }}" alt="{{ product.short_description }}" width="546px" height="417px">
+        </div>
+        <div class="white-box">
+            <a href="{% url 'basket:view' %}" id="button-basket"><img src="{% static 'img/logo-basket.svg' %}" alt="">
+                {% if basket %}
+                    {{ basket.0.total_quantity }}
+                {% endif %}
+            </a>
+            <div class="top">
+                <h3 class="description-title">Стильный</h3>
+                <p class="description">{{ product.description }}</p>
+                <span class="price">{{ product.price }} рублей</span>
+            </div>
+            <div class="bottom">
+                <div class="option-strap-size">
+                    <h3>Ремешок</h3>
+                    <img src="{% static 'img/m.svg' %}" alt="#">
+                    <img src="{% static 'img/l.svg' %}" alt="#">
+                </div>
+                <div class="option-watch-size">
+                    <h3>Часы</h3>
+                    <img src="{% static 'img/38-size.svg' %}" alt="#">
+                    <img src="{% static 'img/42-size.svg' %}" alt="#" width="48px">
+                </div>
+                <a href="{% url 'basket:add' product.pk %}" class="button-buy"><img src="{% static 'img/button-buy.svg' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
+        {# Change below block #}
+    <div class="same_products">
+        {% for product in same %}
+            <a class="same-product-title" href="{% url 'strap:product_id' product.pk %}">{{ product.name }}</a>
+        {% endfor %}
+    </div>
+        {# Change above block #}
+</body>
+</html>

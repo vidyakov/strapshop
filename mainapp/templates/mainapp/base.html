@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ title|title }}
+        {% endblock title %}
+    </title>
+    {% block css %}
+    {% endblock css %}
+
+    {% block js %}
+    {% endblock js %}
+</head>
+<body>
+    <div class="content">
+        {% block header %}
+            <div class="header">
+                <a href="{% url 'home' %}" class="main-logo">salik</a><p class="main-description">авторский интернет-магазин</p>
+                {# Delete this string #}
+                {% if user.is_authenticated %}
+                    <a href="{% url 'edit' %}" style="margin: 450px">{{ user.first_name|default:'Пользоавтель' }}</a>
+                    <a href="{% url 'logout' %}">Выйти</a>
+                {% else %}
+                    <a href="{% url 'login' %}" style="margin: 450px">Войти</a>
+                {% endif %}
+                {# Delete above #}
+                <a href="{% url 'about_us' %}" class="contact"><img src="{% static 'img/logo-contact.svg' %}" alt="#" class="contact-logo"></a>
+                <a href="{% url 'basket:view' %}" class="basket"><img src="{% static 'img/logo-basket.svg' %}" alt="#" class="basket-logo">
+                    {% if basket %}
+                        {{ basket.0.total_quantity }}
+                    {% endif %}
+                </a>
+            </div>
+        {% endblock header %}
+
+        {% block content %}
+        {% endblock content %}
+
+        {% block footer %}
+            <div class="footer">
+                <div class="blue-box">
+                    <a href="#" class="footer-logo">salik</a>
+                    <p class="footer-description">авторский интернет-магазин</p>
+                </div>
+                <div class="contacts">
+                    <h3 class="caption-contacts">Контакты</h3>
+                    <a href="tel: +79266145559" class="contacts-phone">+7 (926) 614-55-59</a>
+                    <a href="mailto: example@mail.ru" class="contacts-email">example@mail.ru</a>
+                </div>
+                <div class="social">
+                    <a href="#" class="link-telegram"><img src="{% static 'img/logo-telegram.svg' %}" alt="#" class="logo-telegram"></a>
+                    <a href="#" class="logo-insta"><img src="{% static 'img/logo-insta.svg' %}" alt="#" class="logo-insta"></a>
+                </div>
+            </div>
+        {% endblock footer %}
+    </div>
+</body>
+</html>

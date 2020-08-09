@@ -1,0 +1,18 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+{% block title %}
+     Верификация
+{% endblock title %}
+
+{% block content %}
+    {% if user %}
+        <h3>Поздравляем!</h3>
+        <br>
+        <h4>Пользователь {{user.username}} подтвержден.</h4>
+        <a href="{% url 'home' %}" class="btn btn-success">На главную</a>
+    {% else %}
+        <h3>Верификация не пройдена.</h3>
+        <a href="{% url 'register' %}" class="btn btn-warning">Попробовать снова</a>
+    {% endif %}
+{% endblock content %}

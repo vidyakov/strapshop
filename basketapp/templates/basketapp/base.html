@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|title }}</title>
+</head>
+<body>
+    <h1 class="basket-title">
+        <p>Ваша корзина:
+            {% if user.first_name %}
+                 {{ user.first_name }}
+            {% else %}
+                 Пользователь
+            {% endif %}
+        </p>
+    </h1>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

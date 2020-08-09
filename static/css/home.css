@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/*MAIN*/
+.content {
+    position: relative;
+    width: 1247px;
+    margin: 0 auto;
+}
+
+
+
+/*HEADER*/
+.header {
+    padding-top: 35px;
+    position: relative;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.main-logo {
+    position: absolute;
+    color: #202135;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.main-description {
+    position: absolute;
+    left: 70px;
+    color: #707070;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact {
+    position: absolute;
+    right: 60px;
+}
+
+.basket {
+    position: absolute;
+    right: 0px;
+}
+
+
+
+/*ABOUT US*/
+.about-us-block {
+    margin-top: 116px;
+    height: 700px;
+    position: relative;
+}
+
+.caption-about-us-bold {
+    font-family: Macho;
+    font-weight: 700;
+    color: #202135;
+    font-size: 60px;
+    float: left;
+}
+
+.caption-about-us {
+    color: #202135;
+    font-family: Macho;
+    font-size: 60px;
+    font-weight: 400;
+    margin-left: 290px;
+}
+
+.pink-box {
+    position: relative;
+    margin-top: 44px;
+    right: 40px;
+    width: 506px;
+    height: 138px;
+    background-color: #ffafc2;
+}
+
+.pink-box-text {
+    position: absolute;
+    width: 229px;
+    height: 31px;
+    color: #ffffff;
+    font-family: Macho;
+    font-size: 25px;
+    font-weight: 700;
+    top: 55px;
+    left: 136px;
+}
+
+.little-hand {
+    position: absolute;
+    top: 61px;
+    right: 20px;
+    width: 35px;
+    height: 21px;
+}
+
+.about-us-img {
+    position: absolute;
+    top: 190px;
+    z-index: -1;
+}
+
+
+
+/*PRODUCTS*/
+.products {
+    margin-top: 150px;
+}
+
+
+/*PRODUCT RIGHT*/
+.product-on-the-right {
+    position: relative;
+    height: 350px;
+    margin-top: 75px;
+}
+
+.product-on-the-right img {
+    width: 500px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.button-more-detailed-right {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    border: 1px solid #ffafc2;
+    width: 200px;
+    height: 75px;
+    color: #ffafc2;
+    font-family: Macho;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+.button-more-detailed-text {
+    position: absolute;
+    top: 25px;
+    right: 53px;
+}
+
+.caption-product-mini-right {
+    position: absolute;
+    color: #202135;
+    font-family: Macho;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.caption-product-big-right {
+    position: absolute;
+    top: 50px;
+    color: #707070;
+    font-family: Macho;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+
+/*PRODUCT LEFT*/
+.product-on-the-left {
+    position: relative;
+    height: 350px;
+    margin-top: 75px;
+}
+
+.product-on-the-left img {
+    width: 500px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.button-more-detailed-left {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+    border: 1px solid #ffafc2;
+    width: 200px;
+    height: 75px;
+    color: #ffafc2;
+    font-family: Macho;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.caption-product-mini-left {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #202135;
+    font-family: Macho;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.caption-product-big-left {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    color: #707070;
+    font-family: Macho;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+/*FOOTER*/
+.footer {
+    position: relative;
+    margin-top: 75px;
+}
+
+.blue-box {
+    position: relative;
+    width: 505px;
+    height: 140px;
+    background-color: #ebf5f6;
+    float: left;
+}
+
+.footer-logo {
+    position: absolute;
+    text-decoration: none;
+    color: #202135;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    left: 50px;
+    top: 50px;
+}
+
+.footer-description {
+    position: absolute;
+    color: #707070;
+    font-family: Macho;
+    font-size: 15px;
+    font-weight: 700;
+    left: 50px;
+    top: 70px;
+}
+
+.contacts {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    color: #707070;
+}
+
+.caption-contacts {
+    color: #202135;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contacts-phone {
+    text-decoration: none;
+    color: #707070;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contacts-email {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #707070;
+    font-family: Macho;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.link-telegram {
+    position: absolute;
+    right: 0px;
+    top: 70px;
+}
+
+.logo-insta {
+    position: absolute;
+    right: 0px;
+    bottom: -5px;
+}

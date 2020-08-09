@@ -1,0 +1,12 @@
+{% extends 'basketapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    {% for item in basket %}
+        <h4>{{ item.product.name }}</h4>
+        <p>{{ item.product_cost }} {{ item.quantity }}</p>
+    {% endfor %}
+    <h1>{{ basket.0.total_cost }}</h1>
+    <h3>{{ basket.0.total_quantity }}</h3>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    {{ title|title }}
+{% endblock title %}
+
+{% block content %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ product_form.as_p }}
+        <input type="submit" value="Save" class="btn btn-success">
+    </form>
+{% endblock content %}

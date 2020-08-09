@@ -1,0 +1,34 @@
+{% extends 'mainapp/base.html' %}
+{% load static  %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <div class="about-us-block">
+        <h1 class="caption-about-us-bold">Ремешки</h1><h1 class="caption-about-us">Apple Watch</h1>
+        <div class="pink-box">
+            <a href="{% url 'about_us' %}"><span class="pink-box-text">Прочитать про нас</span></a>
+            <a href="{% url 'about_us' %}"><img src="{% static 'img/little-hand.png' %}" alt="" class="little-hand"></a>
+        </div>
+        <img src="{% static 'img/img-about-us.svg' %}" alt="#" class="about-us-img">
+    </div>
+    <div class="products">
+    {% for prod_right, prod_left in products %}
+        <div class="product-on-the-right">
+            <h3 class="caption-product-mini-right">Ремешок для</h3>
+            <h1 class="caption-product-big-right">{{ prod_right.name }}</h1>
+            <a href="{% url 'strap:product_id' prod_right.pk %}" class="button-more-detailed-right"><span class="button-more-detailed-text">Подробнее</span></a>
+            <a href="{% url 'strap:product_id' prod_right.pk %}" class="link-product"><img src="/media/{{ prod_right.image_on_home }}" alt="#" class="img-product"></a>
+        </div>
+        <div class="product-on-the-left">
+            <h3 class="caption-product-mini-left">Ремешок для</h3>
+            <h1 class="caption-product-big-left">{{ prod_left.name }}</h1>
+            <a href="{% url 'strap:product_id' prod_left.pk %}" class="button-more-detailed-left"><span class="button-more-detailed-text">Подробнее</span></a>
+            <a href="{% url 'strap:product_id' prod_left.pk %}" class="link-product"><img src="/media/{{ prod_left.image_on_home }}" alt="#" class="img-product"></a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock content %}
